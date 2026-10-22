@@ -16,10 +16,10 @@
 ### Sistema de Gestión de Biblioteca
 
 **Presentado por:**\
-\[Nombre completo del estudiante o integrantes\]
+\[Mauricio Zarate Saavedra\]
 
 **Docente:**\
-\[Nombre del docente\]
+\[Veronica Castro Munar\]
 
 **Fecha:**\
 \[Ciudad, día, mes y año\]
