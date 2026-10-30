@@ -1,0 +1,16 @@
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\bin\Debug\net10.0\AcaBiblioteca.exe
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\bin\Debug\net10.0\AcaBiblioteca.deps.json
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\bin\Debug\net10.0\AcaBiblioteca.runtimeconfig.json
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\bin\Debug\net10.0\AcaBiblioteca.dll
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\bin\Debug\net10.0\AcaBiblioteca.pdb
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBiblioteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBiblioteca.AssemblyInfoInputs.cache
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBiblioteca.AssemblyInfo.cs
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBiblioteca.csproj.CoreCompileInputs.cache
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBiblioteca.sourcelink.json
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBiblioteca.dll
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\refint\AcaBiblioteca.dll
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBiblioteca.pdb
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBiblioteca.genruntimeconfig.cache
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\ref\AcaBiblioteca.dll
+C:\Users\maow8\Documents\GitHub\AcaBiblioteca\AcaBiblioteca\obj\Debug\net10.0\AcaBibli.6C3ACCB4.Up2Date
