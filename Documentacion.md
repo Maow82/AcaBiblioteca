@@ -22,7 +22,7 @@
 \[Veronica Castro Munar\]
 
 **Fecha:**\
-\[Bogota, 15, Noviembre y 2026\]
+\[Bogota, 08, Noviembre 2026\]
 
 ------------------------------------------------------------------------
 # CONTRAPORTADA
