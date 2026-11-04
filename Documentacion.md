@@ -159,10 +159,10 @@ El sistema será desarrollado como una aplicación de escritorio utilizando C#, 
 
 ## 4.2 Actores del sistema
 
-# Actor :    
+## Actor :    
 Bibliotecario / Administrador   
   
-# Descripción:
+## Descripción:
 
 Es el responsable de utilizar el sistema para registrar, consultar, actualizar y eliminar información  de libros, autores, editoriales y usuarios. También gestiona los préstamos y devoluciones, consulta el estado de los préstamos y genera los reportes disponibles.
 
