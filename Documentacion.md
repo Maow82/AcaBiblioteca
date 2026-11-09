@@ -276,17 +276,19 @@ No se permitirá eliminar libros, autores, editoriales o usuarios cuando existan
 
 ## 5.1 Descripción
 
-Los casos de uso permiten identificar y describir las interacciones entre el actor principal y las funcionalidades del Sistema de Gestión de Biblioteca.
+Los casos de uso permiten representar las diferentes interacciones entre el Bibliotecario / Administrador y las funcionalidades principales del Sistema de Gestión de Biblioteca.
 
-El actor principal es el Bibliotecario / Administrador, quien utiliza la aplicación para gestionar los libros, autores, editoriales y usuarios, así como registrar préstamos, gestionar devoluciones y realizar consultas de información.
+A través de la aplicación, el usuario podrá gestionar la información de los libros, registrar préstamos, controlar las devoluciones y consultar los registros almacenados en la base de datos.
 
-Cada caso de uso representa una operación que permite administrar los diferentes módulos del sistema, facilitando la organización y el control de la información de la biblioteca.
+Cada caso de uso describe las actividades que realiza el usuario, las respuestas del sistema y las condiciones necesarias para ejecutar correctamente cada operación.
 
 ## 5.2 Diagrama de casos de uso
 
-A continuación, se presenta el diagrama de casos de uso del Sistema de Gestión de Biblioteca, donde se representan las funcionalidades principales y las interacciones del Bibliotecario / Administrador con la aplicación.
+A continuación, se presenta el diagrama de casos de uso del Sistema de Gestión de Biblioteca, donde se representan las funcionalidades principales y la interacción del Bibliotecario / Administrador con los diferentes módulos de la aplicación.
 
-**Imagen:** Diagrama de casos de uso del Sistema de Gestión de Biblioteca.
+**Archivo sugerido:**
+
+![Diagrama de casos de uso](ruta/al/diagrama-casos-uso.png)
 
 ## 5.3 Descripción de casos de uso
 
@@ -294,7 +296,7 @@ A continuación, se presenta el diagrama de casos de uso del Sistema de Gestión
 
 **Actor principal:** Bibliotecario / Administrador.
 
-**Descripción:** Permite registrar, consultar, actualizar, eliminar y buscar libros, administrando su información bibliográfica y sus relaciones con autores y editoriales.
+**Descripción:** Permite registrar, consultar, actualizar, eliminar y buscar libros, administrando su información bibliográfica y las relaciones con autores y editoriales.
 
 **Precondiciones:**
 
@@ -309,18 +311,98 @@ A continuación, se presenta el diagrama de casos de uso del Sistema de Gestión
 3. El actor selecciona la operación que desea realizar.
 4. El actor ingresa o selecciona la información correspondiente.
 5. El sistema valida los datos ingresados.
-6. El sistema ejecuta la operación solicitada en la base de datos.
-7. El sistema muestra un mensaje indicando el resultado de la operación.
+6. El sistema ejecuta la operación solicitada.
+7. El sistema muestra un mensaje con el resultado de la operación.
 
 **Flujos alternativos:**
 
 - Si existen campos obligatorios vacíos, el sistema solicita completar la información.
 - Si el ISBN ya se encuentra registrado, el sistema informa que el libro existe.
-- Si los datos ingresados no cumplen con las validaciones, el sistema muestra un mensaje de error.
+- Si los datos ingresados no cumplen las validaciones, el sistema muestra un mensaje de error.
 - Si ocurre un problema de conexión con SQL Server, el sistema informa que no fue posible completar la operación.
 
 **Postcondiciones:**
 
 - El libro queda registrado, actualizado o eliminado según la operación realizada.
-- La información puede consultarse posteriormente desde el módulo de libros.
-- Los datos almacenados mantienen las relaciones correspondientes con autores y editoriales.
+- La información puede consultarse posteriormente en el módulo de libros.
+- Se mantienen las relaciones correspondientes con autores y editoriales.
+
+---
+
+### CU02 -- Registrar préstamo
+
+**Actor principal:** Bibliotecario / Administrador.
+
+**Descripción:** Permite registrar el préstamo de un libro a un usuario de la biblioteca, almacenando la información correspondiente y controlando el estado del préstamo.
+
+**Precondiciones:**
+
+- El usuario debe estar registrado en la base de datos.
+- El libro debe estar registrado en la base de datos.
+- Debe existir disponibilidad del libro, si el sistema controla las existencias.
+- La aplicación debe tener conexión con SQL Server.
+
+**Flujo principal:**
+
+1. El actor ingresa al módulo de préstamos.
+2. El sistema muestra el formulario de registro de préstamos.
+3. El actor selecciona el usuario correspondiente.
+4. El actor selecciona el libro que desea prestar.
+5. El sistema verifica que el usuario y el libro existan.
+6. El sistema verifica la disponibilidad del libro, si corresponde.
+7. El actor confirma el registro del préstamo.
+8. El sistema almacena la información del préstamo.
+9. El sistema muestra un mensaje de confirmación.
+
+**Flujos alternativos:**
+
+- Si el usuario no está registrado, el sistema informa que no existe.
+- Si el libro no está registrado, el sistema informa que no existe.
+- Si no hay ejemplares disponibles, el sistema impide realizar el préstamo, cuando se controla la disponibilidad.
+- Si ocurre un error durante el registro, el sistema muestra un mensaje indicando que la operación no pudo completarse.
+
+**Postcondiciones:**
+
+- El préstamo queda registrado en la base de datos.
+- El préstamo queda asociado al usuario y al libro correspondiente.
+- La disponibilidad del libro se actualiza si esta funcionalidad está implementada.
+
+---
+
+### CU03 -- Registrar devolución
+
+**Actor principal:** Bibliotecario / Administrador.
+
+**Descripción:** Permite registrar la devolución de un libro previamente prestado, actualizar la información del préstamo y modificar su estado a devuelto.
+
+**Precondiciones:**
+
+- El usuario debe tener acceso al sistema.
+- Debe existir un préstamo registrado.
+- El préstamo debe encontrarse en estado activo o pendiente de devolución.
+- La aplicación debe tener conexión con SQL Server.
+
+**Flujo principal:**
+
+1. El actor ingresa al módulo de préstamos o devoluciones.
+2. El sistema muestra los préstamos registrados.
+3. El actor identifica y selecciona el préstamo que desea gestionar.
+4. El sistema verifica que el préstamo se encuentre pendiente de devolución.
+5. El actor confirma el registro de la devolución.
+6. El sistema actualiza la fecha de devolución.
+7. El sistema cambia el estado del préstamo a "Devuelto".
+8. El sistema actualiza la disponibilidad del libro, si corresponde.
+9. El sistema muestra un mensaje de confirmación.
+
+**Flujos alternativos:**
+
+- Si el préstamo no existe, el sistema informa que no se encontró el registro.
+- Si el préstamo ya fue devuelto, el sistema informa que no es posible registrar nuevamente la devolución.
+- Si ocurre un error durante la operación, el sistema muestra un mensaje indicando que no fue posible completar el proceso.
+
+**Postcondiciones:**
+
+- La devolución queda registrada en la base de datos.
+- La fecha de devolución queda actualizada.
+- El estado del préstamo cambia a "Devuelto".
+- La disponibilidad del libro se actualiza cuando el sistema controla las existencias.
