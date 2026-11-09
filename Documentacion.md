@@ -166,4 +166,72 @@ Bibliotecario / Administrador
 
 Es el responsable de utilizar el sistema para registrar, consultar, actualizar y eliminar información  de libros, autores, editoriales y usuarios. También gestiona los préstamos y devoluciones, consulta el estado de los préstamos y genera los reportes disponibles.
 
-> 
+## 4.3 Requerimientos funcionales
+
+### RF01. Gestionar libros
+
+El sistema permitirá registrar, consultar, actualizar, eliminar y buscar libros, incluyendo su información bibliográfica y las relaciones con autores y editoriales.
+
+### RF02. Gestionar autores
+
+El sistema permitirá registrar, consultar, actualizar y eliminar autores, respetando las relaciones existentes con los libros.
+
+### RF03. Gestionar editoriales
+
+El sistema permitirá registrar, consultar, actualizar y eliminar editoriales, respetando las restricciones de integridad de la base de datos.
+
+### RF04. Gestionar usuarios
+
+El sistema permitirá registrar, consultar, actualizar y eliminar usuarios de la biblioteca, almacenando sus datos personales y de contacto.
+
+### RF05. Registrar préstamos
+
+El sistema permitirá registrar préstamos asociando un libro con un usuario, almacenar la fecha del préstamo y consultar los registros realizados.
+
+### RF06. Registrar devoluciones
+
+El sistema permitirá registrar la devolución de un libro, actualizar la fecha de devolución y cambiar el estado del préstamo a "Devuelto".
+
+### RF07. Realizar consultas y reportes
+
+El sistema permitirá consultar libros, autores, editoriales, usuarios y préstamos, incluyendo préstamos activos, devueltos e historial de préstamos.
+
+### RF08. Navegación del sistema
+
+El sistema contará con un formulario principal que permitirá acceder de manera organizada a los módulos de inicio, libros, usuarios, autores, editoriales, préstamos y reportes.
+
+## 4.4 Requerimientos no funcionales
+
+### RNF01. Usabilidad
+
+La interfaz gráfica debe ser clara, organizada y fácil de utilizar, facilitando la navegación entre los diferentes módulos del sistema.
+
+### RNF02. Validación
+
+El sistema debe validar la información ingresada por el usuario, verificando los campos obligatorios, formatos y tipos de datos antes de almacenar los registros.
+
+### RNF03. Mantenibilidad
+
+El código fuente debe estar organizado y utilizar nombres descriptivos para clases, métodos, variables y controles, facilitando su comprensión y mantenimiento.
+
+### RNF04. Organización del código
+
+El sistema debe mantener una separación entre los formularios de presentación y las operaciones de conexión y acceso a la base de datos.
+
+### RNF05. Manejo de excepciones
+
+Las operaciones deben manejar los errores de forma controlada, mostrando mensajes claros al usuario y evitando interrupciones inesperadas.
+
+### RNF06. Integridad de datos
+
+La información debe mantenerse consistente en la base de datos mediante claves primarias, claves foráneas y restricciones de integridad.
+
+### RNF07. Consultas parametrizadas
+
+Las consultas y operaciones de acceso a SQL Server deben utilizar parámetros para enviar los valores ingresados por el usuario de manera segura.
+
+### RNF08. Conexión con SQL Server
+
+La aplicación debe establecer una conexión adecuada con SQL Server para realizar las operaciones de registro, consulta, actualización y eliminación de información.
+
+
