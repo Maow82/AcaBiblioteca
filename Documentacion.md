@@ -234,4 +234,93 @@ Las consultas y operaciones de acceso a SQL Server deben utilizar parámetros pa
 
 La aplicación debe establecer una conexión adecuada con SQL Server para realizar las operaciones de registro, consulta, actualización y eliminación de información.
 
+# 4.5 Reglas de negocio
 
+### RN01 -- Código único del libro
+
+No se permitirá registrar dos libros con el mismo código o ISBN, garantizando la identificación única de cada libro.
+
+### RN02 -- Datos obligatorios
+
+No se permitirá almacenar registros con campos obligatorios vacíos.
+
+### RN03 -- Usuario existente
+
+No se podrá registrar un préstamo para un usuario que no exista en la base de datos.
+
+### RN04 -- Libro existente
+
+No se podrá registrar un préstamo para un libro que no exista en la base de datos.
+
+### RN05 -- Disponibilidad
+
+No se podrá prestar un libro cuando no existan ejemplares disponibles, si el sistema implementa el control de existencias.
+
+### RN06 -- Actualización de disponibilidad
+
+Al registrar un préstamo, las existencias o disponibilidad del libro deberán actualizarse, si esta funcionalidad está implementada.
+
+### RN07 -- Devolución
+
+Al registrar una devolución, el sistema deberá actualizar la fecha de devolución y cambiar el estado del préstamo a "Devuelto". La disponibilidad del libro deberá actualizarse cuando se implemente el control de existencias.
+
+### RN08 -- Multa
+
+El cálculo de multas por retraso en la devolución no forma parte de los requerimientos obligatorios establecidos en la guía y solo se contemplará si se implementa esta funcionalidad.
+
+### RN09 -- Integridad de los registros
+
+No se permitirá eliminar libros, autores, editoriales o usuarios cuando existan relaciones o préstamos asociados que impidan su eliminación según las restricciones de integridad de la base de datos.
+
+# 5. CASOS DE USO
+
+## 5.1 Descripción
+
+Los casos de uso permiten identificar y describir las interacciones entre el actor principal y las funcionalidades del Sistema de Gestión de Biblioteca.
+
+El actor principal es el Bibliotecario / Administrador, quien utiliza la aplicación para gestionar los libros, autores, editoriales y usuarios, así como registrar préstamos, gestionar devoluciones y realizar consultas de información.
+
+Cada caso de uso representa una operación que permite administrar los diferentes módulos del sistema, facilitando la organización y el control de la información de la biblioteca.
+
+## 5.2 Diagrama de casos de uso
+
+A continuación, se presenta el diagrama de casos de uso del Sistema de Gestión de Biblioteca, donde se representan las funcionalidades principales y las interacciones del Bibliotecario / Administrador con la aplicación.
+
+**Imagen:** Diagrama de casos de uso del Sistema de Gestión de Biblioteca.
+
+## 5.3 Descripción de casos de uso
+
+### CU01 -- Gestionar libros
+
+**Actor principal:** Bibliotecario / Administrador.
+
+**Descripción:** Permite registrar, consultar, actualizar, eliminar y buscar libros, administrando su información bibliográfica y sus relaciones con autores y editoriales.
+
+**Precondiciones:**
+
+- El usuario debe tener acceso al sistema.
+- La aplicación debe estar conectada a la base de datos SQL Server.
+- Los autores y editoriales asociados deben estar registrados previamente.
+
+**Flujo principal:**
+
+1. El actor ingresa al módulo de libros.
+2. El sistema muestra el formulario de gestión de libros.
+3. El actor selecciona la operación que desea realizar.
+4. El actor ingresa o selecciona la información correspondiente.
+5. El sistema valida los datos ingresados.
+6. El sistema ejecuta la operación solicitada en la base de datos.
+7. El sistema muestra un mensaje indicando el resultado de la operación.
+
+**Flujos alternativos:**
+
+- Si existen campos obligatorios vacíos, el sistema solicita completar la información.
+- Si el ISBN ya se encuentra registrado, el sistema informa que el libro existe.
+- Si los datos ingresados no cumplen con las validaciones, el sistema muestra un mensaje de error.
+- Si ocurre un problema de conexión con SQL Server, el sistema informa que no fue posible completar la operación.
+
+**Postcondiciones:**
+
+- El libro queda registrado, actualizado o eliminado según la operación realizada.
+- La información puede consultarse posteriormente desde el módulo de libros.
+- Los datos almacenados mantienen las relaciones correspondientes con autores y editoriales.
