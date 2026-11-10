@@ -406,3 +406,470 @@ A continuación, se presenta el diagrama de casos de uso del Sistema de Gestión
 - La fecha de devolución queda actualizada.
 - El estado del préstamo cambia a "Devuelto".
 - La disponibilidad del libro se actualiza cuando el sistema controla las existencias.
+
+# 6. DIAGRAMA DE CLASES
+
+## 6.1 Descripción
+
+El diagrama de clases representa la estructura del Sistema de Gestión de Biblioteca mediante las principales clases que permiten organizar y administrar la información del sistema.
+
+Cada clase contiene atributos y métodos que representan sus características y responsabilidades dentro de la aplicación. Estas clases permiten gestionar los libros, autores, editoriales, usuarios y préstamos, manteniendo relaciones entre las diferentes entidades.
+
+El diseño está basado en los principios de Programación Orientada a Objetos, facilitando la organización, comprensión y mantenimiento del código fuente.
+
+## 6.2 Diagrama de clases
+
+A continuación, se presenta el diagrama de clases del Sistema de Gestión de Biblioteca, donde se representan las principales clases, sus atributos, métodos y relaciones dentro de la aplicación.
+
+**Archivo sugerido:**
+
+![Diagrama de clases](ruta/al/diagrama-clases.png)
+
+## 6.3 Principales clases
+
+### Libro
+
+Representa la información bibliográfica de los libros, incluyendo ISBN, título, autor, editorial, categoría, año y existencias.
+
+### Autor
+
+Representa los datos de los autores relacionados con los libros registrados en la biblioteca.
+
+### Editorial
+
+Representa la información de las editoriales responsables de las publicaciones.
+
+### Usuario
+
+Representa la información personal y de contacto de los usuarios que utilizan los servicios de la biblioteca.
+
+### Prestamo
+
+Gestiona la información relacionada con los préstamos de libros a los usuarios, incluyendo las fechas y el estado del préstamo.
+
+### Conexion
+
+Permite establecer y administrar la conexión entre la aplicación y la base de datos SQL Server.
+
+### FrmLibros
+
+Gestiona la interfaz gráfica y las operaciones disponibles para registrar, consultar, actualizar y eliminar libros.
+
+### FrmAutores
+
+Gestiona la interfaz gráfica para administrar la información de los autores.
+
+### FrmEditoriales
+
+Gestiona la interfaz gráfica para administrar la información de las editoriales.
+
+### FrmUsuarios
+
+Gestiona la interfaz gráfica para administrar la información de los usuarios.
+
+### FrmPrestamos
+
+Gestiona la interfaz gráfica para registrar y consultar los préstamos de libros.
+
+## 6.4 Aplicación de POO
+
+En el desarrollo del Sistema de Gestión de Biblioteca se aplican conceptos fundamentales de Programación Orientada a Objetos:
+
+**Clases:** permiten organizar el código mediante estructuras que representan las entidades y componentes del sistema, como libros, autores, usuarios y préstamos.
+
+**Objetos:** son las instancias de las clases que permiten trabajar con la información y ejecutar las operaciones de la aplicación.
+
+**Constructores:** permiten inicializar los objetos y establecer sus valores iniciales cuando se crean instancias de las clases.
+
+**Métodos:** representan las operaciones que realizan las clases, como registrar, consultar, actualizar y eliminar información.
+
+**Propiedades:** permiten definir y acceder a los atributos de las clases, facilitando la administración de los datos.
+
+**Encapsulamiento:** permite proteger y controlar el acceso a los atributos y métodos de las clases mediante los modificadores de acceso correspondientes.
+
+**Colecciones:** permiten almacenar y administrar conjuntos de registros, facilitando la consulta y visualización de información dentro de la aplicación.
+
+**Herencia:** se contempla como un mecanismo de reutilización de código cuando existe una relación entre clases que justifique su utilización.
+
+**Polimorfismo:** se considera un concepto de profundización que permite utilizar diferentes implementaciones de métodos mediante una misma estructura de referencia.
+
+**Sobrecarga:** permite definir varios métodos o constructores con el mismo nombre, pero con diferentes parámetros, cuando las necesidades del sistema lo requieren.
+
+# 7. MODELO ENTIDAD-RELACIÓN
+
+## 7.1 Descripción
+
+El modelo entidad-relación representa la estructura de la base de datos del Sistema de Gestión de Biblioteca. Su propósito es organizar la información de manera lógica, facilitar el almacenamiento y la consulta de los datos, y establecer las relaciones entre las diferentes entidades del sistema.
+
+La base de datos está compuesta por las entidades Libros, Autores, Editoriales, Usuarios y Préstamos. Cada entidad almacena información específica y utiliza claves primarias para identificar sus registros. Además, se emplean claves foráneas para establecer relaciones entre las tablas y mantener la integridad de la información.
+
+## 7.2 Diagrama entidad-relación
+
+En este apartado se presenta el diagrama entidad-relación diseñado para representar la estructura de la base de datos del sistema.
+
+![Modelo entidad-relación](ruta/al/modelo-entidad-relacion.png)
+
+## 7.3 Relaciones principales
+
+Las principales relaciones entre las entidades del sistema son:
+
+- Un autor puede estar asociado a varios libros.
+- Una editorial puede publicar varios libros.
+- Un usuario puede tener varios préstamos registrados.
+- Un libro puede aparecer en diferentes registros de préstamos a lo largo del tiempo.
+- Cada préstamo relaciona un usuario con el libro solicitado.
+
+Estas relaciones permiten organizar la información de la biblioteca y mantener la trazabilidad de los préstamos y las devoluciones.
+
+# 8. DICCIONARIO DE DATOS
+
+## 8.1 Convenciones
+
+- PK: Clave primaria.
+- FK: Clave foránea.
+- UQ: Campo con valor único.
+- NULL: Campo que puede estar vacío.
+- NOT NULL: Campo obligatorio.
+
+## 8.2 Tabla: Autores
+
+Descripción de los campos que componen la tabla de autores.
+
+## 8.3 Tabla: Editoriales
+
+Descripción de los campos que componen la tabla de editoriales.
+
+## 8.4 Tabla: Libros
+
+Descripción de los campos que componen la tabla de libros.
+
+## 8.5 Tabla: Usuarios
+
+Descripción de los campos que componen la tabla de usuarios.
+
+## 8.6 Tabla: Prestamos
+
+Descripción de los campos que componen la tabla de préstamos.
+
+# 9. ARQUITECTURA DEL SISTEMA
+
+## 9.1 Descripción general
+
+El Sistema de Gestión de Biblioteca se desarrolla mediante una aplicación de escritorio utilizando C# y Windows Forms, conectada a una base de datos SQL Server.
+
+El sistema organiza sus componentes para permitir la interacción del usuario, la ejecución de operaciones y el almacenamiento de la información.
+
+Se identifican los siguientes componentes:
+
+1. Capa de Presentación.
+2. Componente de conexión y acceso a datos.
+3. Capa de Base de Datos.
+
+## 9.2 Diagrama de arquitectura
+
+En este apartado se presenta el diagrama de arquitectura del sistema, donde se representa la interacción entre la interfaz de usuario, la conexión a datos y SQL Server.
+
+![Arquitectura del sistema](ruta/al/diagrama-arquitectura.png)
+
+## 9.3 Capa de Presentación
+
+Responsabilidad:
+
+Permite al usuario interactuar con el sistema mediante formularios, desde los cuales puede administrar la información de la biblioteca.
+
+Componentes:
+
+- frmInicio
+- frmLibros
+- frmAutores
+- frmEditoriales
+- frmUsuarios
+- frmPrestamos
+
+Tecnologías utilizadas:
+
+- C#.
+- Windows Forms.
+- .NET.
+
+## 9.4 Lógica de las operaciones
+
+Responsabilidad:
+
+Comprende las operaciones y validaciones que permiten administrar la información de la biblioteca, como registrar, consultar, modificar y eliminar registros, además de gestionar los préstamos y las devoluciones.
+
+Estas operaciones se ejecutan desde los formularios de la aplicación.
+
+Ejemplos de operaciones:
+
+- Validar los campos obligatorios.
+- Verificar la información ingresada.
+- Registrar y actualizar libros.
+- Administrar autores y editoriales.
+- Registrar préstamos.
+- Gestionar devoluciones.
+
+## 9.5 Componente de Acceso a Datos
+
+Responsabilidad:
+
+Gestiona la conexión entre la aplicación y la base de datos SQL Server, permitiendo ejecutar las operaciones necesarias para consultar y almacenar información.
+
+Componentes:
+
+- Conexion.cs
+
+Tecnologías utilizadas:
+
+- SQL Server.
+- ADO.NET.
+- Consultas SQL parametrizadas.
+
+## 9.6 Capa de Base de Datos
+
+La información del sistema se almacena en una base de datos SQL Server, encargada de conservar los registros y las relaciones entre las entidades.
+
+Tablas principales:
+
+- Autores.
+- Editoriales.
+- Libros.
+- Usuarios.
+- Prestamos.
+
+## 9.7 Flujo de información
+
+El funcionamiento general del sistema sigue el siguiente flujo:
+
+Usuario
+  ↓
+Formularios de Windows Forms
+  ↓
+Operaciones y validaciones
+  ↓
+Conexion.cs
+  ↓
+Base de datos SQL Server
+
+Las respuestas de la base de datos regresan a los formularios para mostrar al usuario los resultados de las operaciones realizadas.
+
+# 10. EXPLICACIÓN DE CADA MÓDULO DESARROLLADO
+
+## 10.1 Módulo de libros
+
+Objetivo:
+
+Permitir la administración de la información bibliográfica de los libros registrados en el sistema.
+
+Funcionalidades:
+
+- Registrar nuevos libros.
+- Consultar los libros registrados.
+- Actualizar la información de los libros.
+- Eliminar registros.
+- Buscar libros.
+- Asociar los libros con sus respectivos autores y editoriales.
+
+Validaciones:
+
+- Verificar que los campos obligatorios estén diligenciados.
+- Validar que el ISBN y los datos ingresados cumplan con los requisitos establecidos.
+- Verificar que el autor y la editorial seleccionados existan en el sistema.
+
+## 10.2 Módulo de autores
+
+Objetivo:
+
+Administrar la información de los autores relacionados con los libros de la biblioteca.
+
+Funcionalidades:
+
+- Registrar autores.
+- Consultar autores registrados.
+- Actualizar información.
+- Eliminar registros.
+
+## 10.3 Módulo de editoriales
+
+Objetivo:
+
+Administrar la información de las editoriales asociadas a los libros registrados en la biblioteca.
+
+Funcionalidades:
+
+- Registrar editoriales.
+- Consultar editoriales.
+- Actualizar información.
+- Eliminar registros.
+
+## 10.4 Módulo de usuarios
+
+Objetivo:
+
+Gestionar la información personal y de contacto de los usuarios que utilizan los servicios de la biblioteca.
+
+Funcionalidades:
+
+- Registrar usuarios.
+- Consultar usuarios registrados.
+- Actualizar información.
+- Eliminar registros.
+
+## 10.5 Módulo de préstamos
+
+Objetivo:
+
+Gestionar el registro y seguimiento de los préstamos de libros realizados por los usuarios de la biblioteca.
+
+Funcionalidades:
+
+- Registrar préstamos.
+- Consultar los préstamos registrados.
+- Consultar el estado de los préstamos.
+- Identificar los usuarios y libros asociados a cada préstamo.
+
+## 10.6 Módulo de devoluciones
+
+Objetivo:
+
+Gestionar la devolución de los libros prestados y actualizar la información correspondiente al préstamo.
+
+Funcionalidades:
+
+- Registrar la devolución de un libro.
+- Actualizar el estado del préstamo.
+- Registrar la fecha de devolución.
+
+## 10.7 Módulo de consultas
+
+Objetivo:
+
+Facilitar la consulta de la información almacenada en el sistema para apoyar la administración de la biblioteca.
+
+Consultas:
+
+- Consultar los libros registrados.
+- Consultar los autores.
+- Consultar las editoriales.
+- Consultar los usuarios.
+- Consultar los préstamos registrados.
+- Consultar el estado de los préstamos.
+
+# 11. CAPTURAS DE PANTALLA DEL SISTEMA
+
+En esta sección se presentan las evidencias visuales del Sistema de Gestión de Biblioteca, mostrando las principales interfaces y funcionalidades desarrolladas en la aplicación.
+
+## 11.1 Menú principal
+
+![Menú principal](ruta/captura-menu.png)
+
+Descripción:
+
+Presenta la pantalla inicial del sistema y permite acceder a los diferentes módulos de gestión de la biblioteca.
+
+## 11.2 Gestión de libros
+
+![Gestión de libros](ruta/captura-libros.png)
+
+Descripción:
+
+Permite registrar, consultar, actualizar, eliminar y buscar libros, además de visualizar su información bibliográfica.
+
+## 11.3 Gestión de autores
+
+![Gestión de autores](ruta/captura-autores.png)
+
+Descripción:
+
+Permite administrar la información de los autores mediante las opciones de registro, consulta, actualización y eliminación.
+
+## 11.4 Gestión de editoriales
+
+![Gestión de editoriales](ruta/captura-editoriales.png)
+
+Descripción:
+
+Permite registrar y administrar la información de las editoriales relacionadas con los libros de la biblioteca.
+
+## 11.5 Gestión de usuarios
+
+![Gestión de usuarios](ruta/captura-usuarios.png)
+
+Descripción:
+
+Permite registrar, consultar, actualizar y eliminar la información de los usuarios de la biblioteca.
+
+## 11.6 Registro de préstamos
+
+![Registro de préstamos](ruta/captura-prestamos.png)
+
+Descripción:
+
+Permite registrar los préstamos de libros, relacionando la información del usuario con el libro solicitado.
+
+## 11.7 Registro de devoluciones
+
+![Registro de devoluciones](ruta/captura-devoluciones.png)
+
+Descripción:
+
+Permite gestionar la devolución de los libros prestados y actualizar el estado correspondiente al préstamo.
+
+## 11.8 Consultas
+
+![Consultas](ruta/captura-consultas.png)
+
+Descripción:
+
+Presenta las opciones de consulta disponibles para visualizar la información registrada en el sistema.
+
+# 12. PRUEBAS DE FUNCIONAMIENTO
+
+## 12.1 Estrategia de pruebas
+
+Se realizaron pruebas funcionales en los diferentes módulos del Sistema de Gestión de Biblioteca para verificar el correcto funcionamiento de las operaciones de registro, consulta, actualización y eliminación de información.
+
+También se comprobaron las validaciones de los formularios, la conexión con la base de datos SQL Server y las operaciones relacionadas con los préstamos y las devoluciones.
+
+Todas las pruebas realizadas fueron exitosas, obteniendo los resultados esperados y confirmando el correcto funcionamiento del sistema.
+
+## 12.2 Casos de prueba
+
+Durante las pruebas se verificaron las siguientes funcionalidades:
+
+- CP01. Registro de libros: exitoso.
+- CP02. Validación de registros duplicados: exitosa.
+- CP03. Registro de usuarios: exitoso.
+- CP04. Registro de préstamos: exitoso.
+- CP05. Validación de campos obligatorios: exitosa.
+- CP06. Registro de devoluciones: exitoso.
+- CP07. Consulta de libros: exitosa.
+- CP08. Consulta de usuarios: exitosa.
+
+**Resultado general:** Todos los casos de prueba fueron aprobados. Las funcionalidades evaluadas respondieron correctamente y no se presentaron inconvenientes durante las pruebas.
+
+## 12.3 Evidencias de pruebas
+
+Las pruebas realizadas permitieron comprobar el funcionamiento de los diferentes módulos del sistema. Todos los resultados fueron satisfactorios, confirmando que las operaciones implementadas cumplen con el comportamiento esperado.
+
+## 12.3 Resultados de las pruebas
+
+Las pruebas funcionales realizadas en el Sistema de Gestión de Biblioteca fueron satisfactorias. Se verificó el correcto funcionamiento de los módulos de libros, autores, editoriales, usuarios y préstamos.
+
+Se comprobó que las operaciones de registro, consulta, actualización y eliminación funcionan correctamente, así como las validaciones de los campos obligatorios y la conexión con la base de datos SQL Server.
+
+También se verificó el registro de préstamos y devoluciones, obteniendo los resultados esperados durante su ejecución.
+
+En conclusión, todas las pruebas realizadas fueron aprobadas, confirmando el correcto funcionamiento de las funcionalidades desarrolladas.
+
+# 14. RECOMENDACIONES
+
+- Incorporar nuevas funcionalidades que permitan generar reportes estadísticos sobre los libros registrados, los préstamos realizados y las actividades de la biblioteca.
+
+- Fortalecer la seguridad del sistema mediante la implementación de usuarios y contraseñas de acceso, así como mecanismos de protección de la información almacenada.
+
+- Realizar mantenimiento periódico al código fuente y a la base de datos para corregir posibles errores, optimizar las consultas y garantizar el buen funcionamiento de la aplicación.
+
+- Ampliar las funcionalidades del módulo de préstamos para incluir notificaciones de fechas de devolución próximas y seguimiento de préstamos pendientes.
+
+- Implementar copias de seguridad periódicas de la base de datos para prevenir la pérdida de información ante posibles fallos técnicos.
