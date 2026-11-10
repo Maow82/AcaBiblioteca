@@ -873,3 +873,15 @@ En conclusión, todas las pruebas realizadas fueron aprobadas, confirmando el co
 - Ampliar las funcionalidades del módulo de préstamos para incluir notificaciones de fechas de devolución próximas y seguimiento de préstamos pendientes.
 
 - Implementar copias de seguridad periódicas de la base de datos para prevenir la pérdida de información ante posibles fallos técnicos.
+
+# 15. REFERENCIAS BIBLIOGRÁFICAS
+
+Microsoft. (s. f.). *Documentación de C#*. Microsoft Learn. https://learn.microsoft.com/es-es/dotnet/csharp/
+
+Microsoft. (s. f.). *Windows Forms para .NET*. Microsoft Learn. https://learn.microsoft.com/es-es/dotnet/desktop/winforms/
+
+Microsoft. (s. f.). *Documentación de SQL Server*. Microsoft Learn. https://learn.microsoft.com/es-es/sql/sql-server/
+
+Microsoft. (s. f.). *Información general sobre ADO.NET*. Microsoft Learn. https://learn.microsoft.com/es-es/dotnet/framework/data/adonet/ado-net-overview
+
+Microsoft. (s. f.). *Programación orientada a objetos (C#)*. Microsoft Learn. https://learn.microsoft.com/es-es/dotnet/csharp/fundamentals/tutorials/oop
