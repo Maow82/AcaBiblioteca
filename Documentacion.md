@@ -874,6 +874,55 @@ En conclusión, todas las pruebas realizadas fueron aprobadas, confirmando el co
 
 - Implementar copias de seguridad periódicas de la base de datos para prevenir la pérdida de información ante posibles fallos técnicos.
 
+# ANEXOS
+
+
+## Anexo A. Repositorio GitHub
+
+**Repositorio:** https://github.com/Maow82/AcaBiblioteca
+
+## Anexo B. Script de base de datos
+
+**Archivo:** AcaBiblioteca.sql
+
+### C. Evidencia de Git y GitHub
+
+Durante el desarrollo del proyecto AcaBiblioteca se utilizó Git para el control de versiones y GitHub para almacenar y publicar el código fuente.
+
+### C.1 Creación del repositorio
+
+Se creó un repositorio público en GitHub denominado AcaBiblioteca para almacenar los archivos y recursos relacionados con el proyecto.
+
+### C.2 Commits realizados
+
+Se realizaron diferentes commits para registrar los cambios y actualizaciones efectuados durante el desarrollo del sistema.
+
+### C.3 Organización del proyecto
+
+El repositorio contiene los archivos de código fuente, formularios, recursos gráficos, diagramas, documentación y archivos relacionados con la base de datos.
+
+### C.4 Publicación del código
+
+El código fuente y los recursos del proyecto fueron publicados en el repositorio público de GitHub, permitiendo consultar su contenido.
+
+### C.5 Archivo README.md
+
+Se incorporó el archivo README.md con información general del proyecto, su objetivo, las tecnologías utilizadas y los principales módulos del sistema.
+
+# Anexo D. Otras evidencias
+
+Se incluyen evidencias complementarias del desarrollo y funcionamiento del Sistema de Gestión de Biblioteca.
+
+- Capturas de las interfaces principales de la aplicación.
+- Evidencias de las pruebas funcionales realizadas.
+- Diagrama entidad-relación y diagrama de clases.
+- Diagrama de arquitectura del sistema.
+
+
+
+
+
+
 # 15. REFERENCIAS BIBLIOGRÁFICAS
 
 Microsoft. (s. f.). *Documentación de C#*. Microsoft Learn. https://learn.microsoft.com/es-es/dotnet/csharp/
