@@ -22,7 +22,7 @@
 \[Veronica Castro Munar\]
 
 **Fecha:**\
-\[Bogota, 08, Noviembre 2026\]
+\[Bogota, 11, Noviembre 2026\]
 
 ------------------------------------------------------------------------
 # CONTRAPORTADA
@@ -44,9 +44,6 @@ manejo de excepciones y conexión con SQL Server.
 ------------------------------------------------------------------------
 
 # TABLA DE CONTENIDO
-
-> **Nota:** Actualizar esta sección al finalizar el documento, de
-> acuerdo con la numeración real de las páginas.
 
 1.  Introducción
 2.  Objetivos
