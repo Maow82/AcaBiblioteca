@@ -919,10 +919,6 @@ Se incluyen evidencias complementarias del desarrollo y funcionamiento del Siste
 - Diagrama de arquitectura del sistema.
 
 
-
-
-
-
 # 15. REFERENCIAS BIBLIOGRÁFICAS
 
 Microsoft. (s. f.). *Documentación de C#*. Microsoft Learn. https://learn.microsoft.com/es-es/dotnet/csharp/
@@ -934,3 +930,5 @@ Microsoft. (s. f.). *Documentación de SQL Server*. Microsoft Learn. https://lea
 Microsoft. (s. f.). *Información general sobre ADO.NET*. Microsoft Learn. https://learn.microsoft.com/es-es/dotnet/framework/data/adonet/ado-net-overview
 
 Microsoft. (s. f.). *Programación orientada a objetos (C#)*. Microsoft Learn. https://learn.microsoft.com/es-es/dotnet/csharp/fundamentals/tutorials/oop
+
+# EXCELENTE
